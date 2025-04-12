@@ -1,0 +1,93 @@
+:root {
+    --bg: #000;
+    --text: #fff;
+}
+html {
+    background-color: var(--bg);
+    color: var(--text);
+    font-size: 16px; /* Different sizes are to be used in units of em, unless necessary!! */
+}
+body {
+    margin: 0;
+    overflow: hidden;
+}
+main {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------- */
+/* Gamble Styles */
+/* ------------- */
+.gamble {
+    display: grid;
+    /* border: solid 0.2em var(--text); */
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.gamble-slot {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    /* border: solid 0.2em var(--text); */
+    position: relative;
+    height: var(--gamble-item-height, 100%);
+}
+.gamble-slot-move {
+    position: absolute;
+}
+.gamble-slot-item {
+    width: 100%;
+    height: var(--gamble-item-height, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gamble-machine {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    inset: 0;
+}
+.gamble-machine-inner {
+    position: relative;
+}
+.gamble-button {
+    position: absolute;
+    border-radius: var(--gamble-button-radius);
+}
+
+/* -------------- */
+/* Machine styles */
+/* -------------- */
+#maingamble {
+    height: 100%;
+    font-size: 64px;
+    background-color: #433b6a;
+    border-radius: 16px;
+}
+@media screen and ((max-width: 700px) or (max-height: 700px)) {
+    #maingamble {
+        font-size: 32px;
+    }
+}
+@media screen and ((max-width: 400px) or (max-height: 400px)) {
+    #maingamble {
+        font-size: 16px;
+    }
+}
+
+/* ---------------------------------- */
+/* Custom Styles for custom occasions */
+/* ---------------------------------- */
+.custom-big {
+    font-size: 3em;
+}
